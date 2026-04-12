@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP SERVICE - Сокращение ссылок</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">TOP SERVICE</h1>
+            <div class="nav-links">
+                <a href="#about">О сервисе</a>
+                <a href="#features">Возможности</a>
+                <a href="/login" class="btn-login">Вход</a>
+                <a href="/register" class="btn-register">Регистрация</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>TOP SERVICE - Сервис сокращения ссылок</h2>
+                <p>Самый топовый и универсальный сокращатель ссылок.<br>
+                   Делитесь и отслеживайте свои ссылки с легкостью!</p>
+                
+                <div class="url-shortener">
+                    <input type="url" id="urlInput" placeholder="Вставьте ссылку" required>
+                    <button onclick="shortenUrl()" class="btn-shorten">Сократить</button>
+                </div>
+                
+                <div id="result" class="result" style="display: none;">
+                    <p>Ваша короткая ссылка:</p>
+                    <a id="shortUrl" href="#" target="_blank"></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="star">⭐</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О сервисе</h2>
+            <p>Наш сервис позволяет быстро и удобно сокращать длинные URL-адреса, делая их более удобными для分享 и отслеживания.</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Возможности</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>🔗 Сокращение ссылок</h3>
+                    <p>Мгновенное создание коротких ссылок</p>
+                </div>
+                <div class="feature">
+                    <h3>📊 Статистика</h3>
+                    <p>Отслеживание количества переходов</p>
+                </div>
+                <div class="feature">
+                    <h3>🔐 Надежность</h3>
+                    <p>Ваши данные под надежной защитой</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TOP SERVICE. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

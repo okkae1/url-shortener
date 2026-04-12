@@ -1,0 +1,26 @@
+# База данных
+*.db
+*.db-shm
+*.db-wal
+
+# Сборка
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Зависимости 
+/vendor
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Логи
+*.log
+
+# ENV (секреты)
+.env
+*.env
