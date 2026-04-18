@@ -52,8 +52,8 @@ func main() {
 	r.GET("/s/:shortCode", handlers.RedirectToOriginal)
 	r.GET("/info/:shortCode", handlers.GetURLInfo)
 
-	log.Println("🚀 Сервер запущен на http://localhost:8080")
+	log.Println(" Сервер запущен на http://localhost:8080")
 	if err := r.Run(":8080"); err != nil {
-		log.Fatal("❌ Ошибка запуска сервера:", err)
+		log.Fatal(" Ошибка запуска сервера:", err)
 	}
 }
