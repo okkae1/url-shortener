@@ -1,3 +1,38 @@
+:root {
+   
+    --white: #ffffff;
+    --black: #000000;
+    --text-dark: #333333;
+    --text-gray: #555555;
+    --text-light: #666666;
+    --text-muted: #999999;
+    
+    
+    --bg-light: #f5f5f5;
+    --bg-white: #ffffff;
+    --bg-gray: #f8f9fa;
+    
+    
+    --border-light: #e0e0e0;
+    
+    
+    --primary: #3498db;
+    --primary-dark: #2980b9;
+    --dark: #2c3e50;
+    --dark-darker: #1a252f;
+    
+    
+    --gradient-start: #667eea;
+    --gradient-end: #764ba2;
+    
+    
+    --danger: #e74c3c;
+    --danger-dark: #c0392b;
+    
+    
+    --gray: #95a5a6;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +41,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: #f5f5f5;
-    color: #333;
+    background: var(--bg-light);
+    color: var(--text-dark);
 }
 
 .container {
@@ -17,9 +52,9 @@ body {
 }
 
 .navbar {
-    background: #fff;
-    border-bottom: 2px solid #e0e0e0;
-    padding: 1rem 0;
+    background: var(--bg-white);
+    border-bottom: 2px solid var(--border-light);
+    padding: 16px 0;
 }
 
 .navbar .container {
@@ -29,30 +64,30 @@ body {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 29px;
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--dark);
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 32px;
     align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #555;
+    color: var(--text-gray);
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #3498db;
+    color: var(--primary);
 }
 
 .btn-login, .btn-register {
-    padding: 0.5rem 1.5rem;
+    padding: 8px 24px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
@@ -60,29 +95,29 @@ body {
 }
 
 .btn-login {
-    color: #3498db;
-    border: 2px solid #3498db;
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .btn-login:hover {
-    background: #3498db;
-    color: #fff;
+    background: var(--primary);
+    color: var(--white);
 }
 
 .btn-register {
-    background: #3498db;
-    color: #fff;
-    border: 2px solid #3498db;
+    background: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--primary);
 }
 
 .btn-register:hover {
-    background: #2980b9;
+    background: var(--primary-dark);
 }
 
 .hero {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
+    padding: 64px 0;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: var(--white);
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -91,7 +126,7 @@ body {
 .hero .container {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 64px;
 }
 
 .hero-content {
@@ -99,58 +134,58 @@ body {
 }
 
 .hero-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 40px;
+    margin-bottom: 16px;
     line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 19px;
+    margin-bottom: 32px;
     opacity: 0.9;
 }
 
 .url-shortener {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 16px;
+    margin-bottom: 16px;
 }
 
 .url-shortener input {
     flex: 1;
-    padding: 1rem;
+    padding: 16px;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .btn-shorten {
-    padding: 1rem 2rem;
-    background: #2c3e50;
-    color: #fff;
+    padding: 16px 32px;
+    background: var(--dark);
+    color: var(--white);
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .btn-shorten:hover {
-    background: #1a252f;
+    background: var(--dark-darker);
 }
 
 .result {
     background: rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
+    padding: 24px;
     border-radius: 5px;
-    margin-top: 1rem;
+    margin-top: 16px;
 }
 
 .result a {
-    color: #fff;
+    color: var(--white);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 19px;
 }
 
 .hero-image {
@@ -172,7 +207,7 @@ body {
 
 .about, .features {
     padding: 64px 0;
-    background: #fff;
+    background: var(--bg-white);
     text-align: center;
 }
 
@@ -180,19 +215,19 @@ body {
     text-align: center;
     font-size: 32px;
     margin-bottom: 32px;
-    color: #2c3e50;
+    color: var(--dark);
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 32px;
+    margin-top: 32px;
 }
 
 .feature {
-    padding: 2rem;
-    background: #f8f9fa;
+    padding: 32px;
+    background: var(--bg-gray);
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s;
@@ -203,8 +238,8 @@ body {
 }
 
 .feature h3 {
-    margin-bottom: 1rem;
-    color: #2c3e50;
+    margin-bottom: 16px;
+    color: var(--dark);
 }
 
 .auth-section {
@@ -212,12 +247,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 32px;
 }
 
 .auth-container {
-    background: #fff;
-    padding: 3rem;
+    background: var(--bg-white);
+    padding: 48px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     max-width: 400px;
@@ -226,81 +261,81 @@ body {
 
 .auth-container h2 {
     text-align: center;
-    margin-bottom: 2rem;
-    color: #2c3e50;
+    margin-bottom: 32px;
+    color: var(--dark);
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     font-weight: 500;
-    color: #555;
+    color: var(--text-gray);
 }
 
 .form-group input {
     width: 100%;
-    padding: 0.75rem;
-    border: 2px solid #e0e0e0;
+    padding: 12px;
+    border: 2px solid var(--border-light);
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px;
     transition: border-color 0.3s;
 }
 
 .form-group input:focus {
     outline: none;
-    border-color: #3498db;
+    border-color: var(--primary);
 }
 
 .btn-submit {
     width: 100%;
-    padding: 1rem;
-    background: #3498db;
-    color: #fff;
+    padding: 16px;
+    background: var(--primary);
+    color: var(--white);
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .btn-submit:hover {
-    background: #2980b9;
+    background: var(--primary-dark);
 }
 
 .auth-link {
     text-align: center;
-    margin-top: 1.5rem;
-    color: #666;
+    margin-top: 24px;
+    color: var(--text-light);
 }
 
 .auth-link a {
-    color: #3498db;
+    color: var(--primary);
     text-decoration: none;
 }
 
 .dashboard {
-    padding: 3rem 0;
+    padding: 48px 0;
 }
 
 .dashboard h2 {
-    margin-bottom: 2rem;
-    color: #2c3e50;
+    margin-bottom: 32px;
+    color: var(--dark);
 }
 
 .urls-list {
-    margin-top: 2rem;
+    margin-top: 32px;
 }
 
 .url-item {
-    background: #fff;
-    padding: 1.5rem;
+    background: var(--bg-white);
+    padding: 24px;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -312,28 +347,28 @@ body {
 }
 
 .original-url {
-    color: #666;
-    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
     word-break: break-all;
 }
 
 .short-url {
-    color: #3498db;
+    color: var(--primary);
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 18px;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 }
 
 .stats {
-    color: #999;
-    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-size: 14px;
 }
 
 .btn-delete {
-    padding: 0.5rem 1rem;
-    background: #e74c3c;
-    color: #fff;
+    padding: 8px 16px;
+    background: var(--danger);
+    color: var(--white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -341,13 +376,13 @@ body {
 }
 
 .btn-delete:hover {
-    background: #c0392b;
+    background: var(--danger-dark);
 }
 
 .btn-logout {
-    padding: 0.5rem 1rem;
-    background: #95a5a6;
-    color: #fff;
+    padding: 8px 16px;
+    background: var(--gray);
+    color: var(--white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -355,13 +390,13 @@ body {
 
 .no-urls {
     text-align: center;
-    color: #999;
+    color: var(--text-muted);
     padding: 32px;
 }
 
 .footer {
-    background: #2c3e50;
-    color: #fff;
+    background: var(--dark);
+    color: var(--white);
     text-align: center;
     padding: 32px 0;
     margin-top: 64px;
