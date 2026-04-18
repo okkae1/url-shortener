@@ -11,7 +11,6 @@ import (
 
 var DB *sql.DB
 
-// Инициализация БД
 func InitDB() {
 	var err error
 	DB, err = sql.Open("sqlite", "./urls.db")
@@ -19,7 +18,6 @@ func InitDB() {
 		log.Fatal(err)
 	}
 
-	// Создаем таблицы
 	createTables()
 }
 
@@ -53,8 +51,8 @@ func createTables() {
 	}
 }
 
-// Пользователи
 func CreateUser(email, password, name string) (*models.User, error) {
+
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
 	if err != nil {
 		return nil, err
@@ -73,6 +71,7 @@ func CreateUser(email, password, name string) (*models.User, error) {
 }
 
 func FindUserByEmail(email string) (*models.User, error) {
+
 	user := &models.User{}
 	err := DB.QueryRow(
 		"SELECT id, email, password, name, created_at FROM users WHERE email = ?",
@@ -98,8 +97,8 @@ func FindUserByID(id int) (*models.User, error) {
 	return user, nil
 }
 
-// URL
 func CreateURL(userID int, originalURL, shortCode string) (*models.URL, error) {
+
 	result, err := DB.Exec(
 		"INSERT INTO urls (user_id, original_url, short_code) VALUES (?, ?, ?)",
 		userID, originalURL, shortCode,
@@ -118,6 +117,7 @@ func CreateURL(userID int, originalURL, shortCode string) (*models.URL, error) {
 }
 
 func FindURLByShortCode(shortCode string) (*models.URL, error) {
+
 	url := &models.URL{}
 	err := DB.QueryRow(
 		"SELECT id, user_id, original_url, short_code, clicks, created_at FROM urls WHERE short_code = ?",
@@ -131,6 +131,7 @@ func FindURLByShortCode(shortCode string) (*models.URL, error) {
 }
 
 func GetUserURLs(userID int) ([]models.URL, error) {
+
 	rows, err := DB.Query(
 		"SELECT id, user_id, original_url, short_code, clicks, created_at FROM urls WHERE user_id = ? ORDER BY created_at DESC",
 		userID,
